@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_text"
+    android:orientation="vertical"
+    android:padding="16sp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Enjoying the app?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:text="Please take a moment to rate and review our app. Your feedback helps us improve."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_later"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/login_btn"
+            android:text="Later"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_rate_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/register_btn"
+            android:text="Rate Now"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

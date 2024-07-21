@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".FragmentTransaction">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerOfHome"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_cover"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="10sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/notification"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_marginEnd="20sp"-->
+            <!--                android:src="@drawable/bell" />-->
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerOfHome"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/transactionReq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25sp"
+                android:orientation="vertical">
+
+                <!-- Populated dynamically from FragmentShakeRequest -->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

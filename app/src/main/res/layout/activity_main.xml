@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/appIntro"
+        android:src="@drawable/intro" />
+
+    <TextView
+        android:id="@+id/appIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/progressBarHorizontal"
+        android:layout_marginStart="25sp"
+        android:layout_marginEnd="25sp"
+        android:layout_marginBottom="20sp"
+        android:text="Weight Loss With - Akshay Fitness"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressBarHorizontal"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/black"
+        android:indeterminateTintMode="src_atop" />
+
+</RelativeLayout>

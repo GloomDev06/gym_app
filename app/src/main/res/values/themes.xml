@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyHealthFitness" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.MyHealthFitness" parent="Base.Theme.MyHealthFitness" />
+
+    <!-- DIVIDER-->
+    <style name="DividerStyle">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+
+    <!-- ROUNDED IMAGE VIEW -->
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TransparentDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

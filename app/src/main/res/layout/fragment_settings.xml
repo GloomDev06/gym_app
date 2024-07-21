@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+
+    tools:context=".FragmentSettings">
+
+    <RelativeLayout
+        android:id="@+id/headerOfHome"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bottom_cover"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="10sp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:textAlignment="textStart"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/notification"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_marginEnd="20sp"-->
+        <!--                android:src="@drawable/bell" />-->
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footerContxt"
+        android:layout_below="@id/headerOfHome"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/titleSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:text="Settings"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleSettings"
+                android:layout_margin="20sp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Account Settings"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/userProfileDet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/top_cover"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="User Profile"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right"
+                    app:drawableStartCompat="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/wallets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/middle"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="Wish List"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:drawableEndCompat="@drawable/chevron_right"
+                    app:drawableStartCompat="@drawable/heart" />
+
+                <TextView
+                    android:id="@+id/transactionHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/middle"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="Transaction History"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right"
+                    app:drawableStartCompat="@drawable/sort_alt" />
+
+                <TextView
+                    android:id="@+id/shakeReq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/middle"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="Shake Requests"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right"
+                    app:drawableStartCompat="@drawable/receipt" />
+
+                <TextView
+                    android:id="@+id/notificationSettingsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/bottom_cover"
+                    android:drawableStart="@drawable/bell"
+                    android:padding="15sp"
+                    android:text="Notification Settings"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Spread the word"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rateUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/top_cover"
+                    android:drawableStart="@drawable/star"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="Rate App"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right" />
+
+                <TextView
+                    android:id="@+id/shareApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/bottom_cover"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="Share App"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right"
+                    app:drawableStartCompat="@drawable/upload" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Support and Privacy"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/emailUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/top_cover"
+                    android:drawableStart="@drawable/envelope"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="E-mail Us"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right" />
+
+                <TextView
+                    android:id="@+id/faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/middle"
+                    android:drawableStart="@drawable/question_circle"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="Browse FAQ's"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right" />
+
+
+                <TextView
+                    android:id="@+id/termsOfUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/bottom_cover"
+                    android:drawableStart="@drawable/file_plus"
+                    android:gravity="center_vertical"
+                    android:padding="15sp"
+                    android:text="Terms of Use"
+                    android:textSize="17sp"
+                    app:drawableEndCompat="@drawable/chevron_right" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/button_bg"
+                    android:text="logout"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/footerContxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary"
+        android:padding="15sp"
+        android:text="Made in love of Fitness and Developed by GloomDev Pvt Ltd"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>

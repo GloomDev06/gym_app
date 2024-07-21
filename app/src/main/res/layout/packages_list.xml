@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp">
+
+
+        <ImageView
+            android:id="@+id/productImageList"
+            style="@style/roundedImageView"
+            android:layout_width="90sp"
+            android:layout_height="100sp"
+            android:src="@drawable/energy_drink" />
+
+        <LinearLayout
+            android:id="@+id/productContents"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_marginStart="20sp"
+            android:layout_toEndOf="@id/productImageList"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Product Name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/productCredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Credits: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Price :"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/heart" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@id/productContents"
+            android:layout_marginTop="20sp" />
+    </RelativeLayout>
+</RelativeLayout>

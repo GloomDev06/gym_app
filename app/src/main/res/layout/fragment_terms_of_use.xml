@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".TermsOfUse">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerOfHome"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_cover"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="10sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/notification"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_marginEnd="20sp"-->
+            <!--                android:src="@drawable/bell" />-->
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerOfHome"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:lineHeight="25sp"
+                        android:text="Weightloss with Akshay Fitness - Comprehensive Policy"
+                        android:textAllCaps="true"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20sp"
+                        android:justificationMode="inter_word"
+                        android:text="* This document outlines the policies governing your use of the Weightloss with Akshay Fitness mobile application."
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:lineHeight="25sp"
+                        android:text="Privacy Policy"
+                        android:textAllCaps="true"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20sp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/textOne"
+                        android:textSize="17sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:lineHeight="25sp"
+                        android:text="Information We Collect"
+                        android:textAllCaps="true"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="We collect two categories of information:"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/textTwo"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Name"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Date of Birth"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Email address"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Mobile number"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Payment information"
+                        android:textSize="17sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tNon-Personal Information: Does not identify you and includes:"
+                        android:textSize="17sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Device information (type, operating system, unique identifiers)"
+                        android:textSize="17sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ App usage data (date, time, features used, shake requests)"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="How We Use Your Information"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="We use your information to:"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Manage your Weightloss with Akshay Fitness membership access."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Process payments for package purchases within the App."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Track and fulfill your shake requests at Weightloss with Akshay Fitness."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Communicate with you about your account, app updates, and promotional offers (with your consent)."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Analyze app usage data to improve Weightloss with Akshay Fitness services and user experience."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="How We Share Your Information"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tWe may share your information with third-party service providers who assist us in operating the App. These providers are obligated by contract to protect your information and use it only for the purposes we specify. We will not share your personal information with any third-party for marketing purposes without your explicit consent."
+                        android:textSize="17sp" />
+
+
+                    <!-- Data Security Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Data Security"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tWe take reasonable steps to protect your information from unauthorized access, disclosure, alteration, or destruction. However, no internet transmission or electronic storage method is completely secure."
+                        android:textSize="17sp" />
+
+                    <!-- Your Rights Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Your Rights"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tYou have the right to access, update, and delete your personal information. You can also opt out of receiving promotional communications from us. To exercise these rights, please contact us through the App or at [support email address]."
+                        android:textSize="17sp" />
+
+                    <!-- Data Security Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Data Security"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tWe take reasonable steps to protect your information from unauthorized access, disclosure, alteration, or destruction. However, no internet transmission or electronic storage method is completely secure."
+                        android:textSize="17sp" />
+
+                    <!-- Your Rights Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Your Rights"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tYou have the right to access, update, and delete your personal information. You can also opt out of receiving promotional communications from us. To exercise these rights, please contact us through the App or at [support email address]."
+                        android:textSize="17sp" />
+
+                    <!-- Changes to this Privacy Policy Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Changes to this Privacy Policy"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tWe may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on the App."
+                        android:textSize="17sp" />
+
+                    <!-- Terms of Use Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Terms of Use"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tWelcome These Terms of Use ('Terms') govern your access to and use of the Weightloss with Akshay Fitness App. By accessing or using the App, you agree to be bound by these Terms. If you disagree with any part of these Terms, you may not access or use the App."
+                        android:textSize="17sp" />
+
+                    <!-- Acceptable Use Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Acceptable Use"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\tYou agree to use the App only for lawful purposes and in accordance with these Terms. You agree not to:"
+                        android:textSize="17sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Violate any applicable laws or regulations."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Infringe on the intellectual property rights of Weightloss with Akshay Fitness or others."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Transmit harmful or malicious content through the App."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Disrupt or interfere with the App or its servers."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Attempt to gain unauthorized access to the App or its systems."
+                        android:textSize="17sp" />
+
+                    <!-- Content Ownership -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Content Ownership"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ The App's content, including text, graphics, logos, images, and software, is the property of Weightloss with Akshay Fitness or its licensors and is protected by copyright and other intellectual property laws."
+                        android:textSize="17sp" />
+
+                    <!-- Disclaimers -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Disclaimers"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ The Weightloss with Akshay Fitness App is provided on an 'as is' and 'as available' basis. We make no warranties, express or implied, regarding the App's operation or functionality."
+                        android:textSize="17sp" />
+
+                    <!-- Limitation of Liability -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Limitation of Liability"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ We will not be liable for any damages arising out of or related to your use of the Weightloss with Akshay Fitness App."
+                        android:textSize="17sp" />
+
+                    <!-- Termination -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Termination"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ We may terminate your access to the Weightloss with Akshay Fitness App at any time, for any reason, without notice."
+                        android:textSize="17sp" />
+
+                    <!-- Changes to the Terms -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Changes to the Terms"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ We may update these Terms from time to time. We will notify you of any changes by posting the new Terms on the App."
+                        android:textSize="17sp" />
+
+                    <!-- Refund and Cancellation Policy -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Refund and Cancellation Policy"
+                        android:textSize="17sp" />
+
+                    <!-- Refunds -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Refunds"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ We offer full refunds for package purchases within 24 hours of purchase within the Weightloss with Akshay Fitness App if no services have been used. After this period, refunds are at the discretion of the Weightloss with Akshay Fitness management."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ To request a refund, please contact us through the Weightloss with Akshay Fitness App or at [support email address] with your order details."
+                        android:textSize="17sp" />
+
+                    <!-- Cancellations -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Cancellations"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ You can cancel your subscription within 24 hours of purchase for a full refund if no services have been used within Weightloss with Akshay Fitness. For cancellations after this period, please contact support for assistance."
+                        android:textSize="17sp" />
+
+                    <!-- Data Collection and Use Policy -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Data Collection and Use Policy"
+                        android:textSize="17sp" />
+
+                    <!-- Additional Information Specific to the App -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Additional Information Specific to the App"
+                        android:textSize="17sp" />
+
+                    <!-- Specific data collected -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Shake Request History: We collect information about your shake requests, including date, time, QR code scanned (if applicable), and request status (pending, completed, cancelled)."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Credit Usage: We track your shake credit usage, including credit balance, credits used per shake request, and any adjustments made by the admin."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Fitness Goals (Optional): If you choose to set fitness goals within the App, we collect information about your goals (e.g., weight loss target, exercise preferences)."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Workout Tracking (if applicable): If the App offers workout tracking features, we may collect data about your workouts, such as type of workout, duration, and calories burned (if tracked)."
+                        android:textSize="17sp" />
+
+                    <!-- How We Use This Additional Information -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="How We Use This Additional Information"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Provide and improve your Weightloss with Akshay Fitness experience. By tracking your shake requests and credit usage, we can ensure accurate billing and manage your shake inventory efficiently."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Personalize your Weightloss with Akshay Fitness journey. If you set fitness goals, we may use this information to suggest relevant content and workouts within the App."
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ Develop and improve the Weightloss with Akshay Fitness App. By analyzing workout tracking data (if applicable) and user behavior, we can identify areas for improvement and develop new features to better support your weight loss goals."
+                        android:textSize="17sp" />
+
+                    <!-- Data Retention -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Data Retention"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ We will retain your data for as long as necessary to fulfill the purposes outlined in this Data Collection and Use Policy and the Privacy Policy, or as required by law. We will then delete your data in a secure manner."
+                        android:textSize="17sp" />
+
+                    <!-- Your Consent -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Your Consent"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ By using the Weightloss with Akshay Fitness App, you consent to the collection, use, and disclosure of your information as described in this Data Collection and Use Policy and the Privacy Policy."
+                        android:textSize="17sp" />
+
+                    <!-- Changes to this Policy -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Changes to this Policy"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ We may update this Data Collection and Use Policy from time to time. We will notify you of any changes by posting the new Policy on the App."
+                        android:textSize="17sp" />
+
+                    <!-- Contact Us -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Contact Us"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ If you have any questions about this Data Collection and Use Policy, please contact us through the Weightloss with Akshay Fitness App or at [support email address]."
+                        android:textSize="17sp" />
+
+                    <!-- Shipping Policy -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="Shipping Policy"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10sp"
+                        android:justificationMode="inter_word"
+                        android:text="No Physical Products"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:justificationMode="inter_word"
+                        android:text="\t\t\t\t\t➮ The Weightloss with Akshay Fitness App offers digital services for managing your membership, tracking shake requests, and (potentially) setting fitness goals. We do not sell or ship any physical products. Therefore, this Shipping Policy is not applicable."
+                        android:textSize="17sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

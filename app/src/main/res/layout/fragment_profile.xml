@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/headerOfHome"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bottom_cover"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="10sp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/notification"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentEnd="true"-->
+                <!--                    android:layout_marginEnd="20sp"-->
+                <!--                    android:src="@drawable/bell" />-->
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/logo"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_below="@id/headerOfHome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_profile"
+                app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+            <TextView
+                android:id="@+id/goldMember"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30sp"
+                android:drawableLeft="@drawable/crown"
+                android:text="Gold member"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="28sp"
+                android:layout_below="@id/goldMember"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="30sp"
+                android:layout_marginBottom="20sp"
+                android:gravity="center"
+                android:text="User name"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userId"
+                android:layout_width="match_parent"
+                android:layout_height="28sp"
+                android:layout_below="@id/username"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30sp"
+                android:layout_marginEnd="30sp"
+                android:layout_marginTop="10sp"
+                android:gravity="center"
+                android:text="User ID"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phoneTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/userId"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="20sp"
+                android:gravity="center_vertical"
+                android:text="Phone"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/userId"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="10sp"
+                android:layout_toStartOf="@id/editPhone"
+                android:layout_toEndOf="@id/currentCredit"
+                android:capitalize="sentences"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="Phone number"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/editPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/userId"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="30sp"
+                android:onClick="showEditDialog"
+                android:src="@drawable/pencil" />
+
+            <TextView
+                android:id="@+id/emailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/phoneTitle"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="20sp"
+                android:gravity="center_vertical"
+                android:text="Mail"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/phoneNumber"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="10sp"
+                android:layout_toStartOf="@id/editMail"
+                android:layout_toEndOf="@id/currentCredit"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="Mail ID"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/editMail"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/editPhone"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="30sp"
+                android:labelFor="@id/editPhone"
+                android:onClick="showEditDialog"
+                android:src="@drawable/pencil" />
+
+            <TextView
+                android:id="@+id/dataOfBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/emailTitle"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="20sp"
+                android:gravity="center_vertical"
+                android:text="Date of Birth"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dateOfBirthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/emailText"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="10sp"
+                android:layout_toStartOf="@id/editDOB"
+                android:layout_toEndOf="@id/currentCredit"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="DD-MM-YYYY"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/editDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/editMail"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="30sp"
+                android:labelFor="@id/editPhone"
+                android:onClick="showEditDialog"
+                android:src="@drawable/pencil" />
+
+
+            <TextView
+                android:id="@+id/currentCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/dateOfBirthValue"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="20sp"
+                android:gravity="center_vertical"
+                android:text="Current Credit Score"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/creditValue"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/dateOfBirthValue"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="30sp"
+                android:layout_toEndOf="@id/currentCredit"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="Credit Score"
+                android:textSize="17sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

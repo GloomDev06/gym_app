@@ -1,0 +1,170 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".NotificationSettings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/headerOfHome"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_cover"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="10sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/notification"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginEnd="20sp"-->
+<!--                android:src="@drawable/bell" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerOfHome"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp">
+
+
+            <TextView
+                android:id="@+id/titleSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="Notification Preferences"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleSettings"
+                android:layout_marginTop="10sp"
+                android:text="Get notification from our app on your mobile on time.."
+                android:textColor="@color/grey2"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/packageCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hint"
+                android:layout_marginTop="20sp"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Packages"
+                android:textColor="@color/black1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/hintPackages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/packageCheckBox"
+                android:text="* Latest updates on upcoming packages"
+                android:textColor="@color/grey2"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/remainders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hintPackages"
+                android:layout_marginTop="10sp"
+                android:buttonTint="@color/checkbox"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Remainder"
+                android:textColor="@color/black1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/remainderHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/remainders"
+                android:text="* Remainder about renewals and orders"
+                android:textColor="@color/grey2"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/recommendations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/remainderHint"
+                android:layout_marginTop="10sp"
+                android:buttonTint="@color/checkbox"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Recommendations"
+                android:textColor="@color/black1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/recommendationHints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recommendations"
+                android:text="* Get recommendations based on your interest"
+                android:textColor="@color/grey2"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recommendationHints"
+                android:layout_marginTop="10sp"
+                android:buttonTint="@color/checkbox"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Review"
+                android:textColor="@color/black1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/reviewHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reviews"
+                android:text="* Latest updates on upcoming packages"
+                android:textColor="@color/grey2"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

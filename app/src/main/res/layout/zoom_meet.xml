@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20sp"
+    android:background="@drawable/login_bg"
+    android:padding="10sp">
+
+    <ImageView
+        android:id="@+id/zoomImg"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/zoom" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5sp"
+        android:layout_toRightOf="@id/zoomImg"
+        android:orientation="vertical"
+        android:padding="5sp">
+
+        <TextView
+            android:id="@+id/zoomTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="zoomTime"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="Description"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnZoomMeeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/register_btn"
+            android:padding="10sp"
+            android:text="Join Zoom Meeting"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

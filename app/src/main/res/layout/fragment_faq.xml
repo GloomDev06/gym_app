@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".Faq">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerOfHome"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_cover"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="10sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/notification"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentEnd="true"-->
+            <!--                android:layout_marginEnd="20sp"-->
+            <!--                android:src="@drawable/bell" />-->
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerOfHome"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/faqHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Frequenty Asked Questions"
+                            android:textAllCaps="true"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/faqIntro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="@string/faqIntroText"
+                            android:textSize="17sp" />
+
+                        <!-- GENERAL-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="General"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. What's this app for ?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:justificationMode="inter_word"
+                            android:text="Manage your fitness center membership, track shake credits, request shakes, and access fitness content (if applicable)."
+                            android:textSize="17sp" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. How do I sign up?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:justificationMode="inter_word"
+                            android:text="Use your mobile number. We'll verify it with an OTP. Then, complete your profile"
+                            android:textSize="17sp" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+                        <!-- LOGIN CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Login"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. Can I stay signed in?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:justificationMode="inter_word"
+                            android:text="Yes, enable at login."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. How do I update my profile?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:justificationMode="inter_word"
+                            android:text="Edit your info through app settings."
+                            android:textSize="17sp" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+                        <!-- PACKAGES CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Packages"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. How do I buy a package?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Browse and purchase packages directly in the app using secure payment methods."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. What are shake credits?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Credits used to request shakes at the center. Packages include a certain number of credits."
+                            android:textSize="17sp" />
+
+                        <!-- Question 3 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="3. How do I request a shake?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Scan a designated QR code at the center with the app (if you have enough credits)."
+                            android:textSize="17sp" />
+
+                        <!-- Question 4 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="4. I'm out of credits. What now?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="The app will prompt you to recharge your wallet or purchase a new package."
+                            android:textSize="17sp" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+                        <!-- SHAKE REQUESTS CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Shake Requests"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. How can I track my shake requests?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="View a list of pending requests with order numbers in the app."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. What if my shake isn't made?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Requests not completed within 2 hours are automatically deleted without credit deduction."
+                            android:textSize="17sp" />
+
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+
+                        <!-- CREDIT MANAGEMENT CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Credit Management"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. How do I see my credit history?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="View your credit history in a table format within the app. It details dates, credit usage, and balance."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. Payment deducted but no credits?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Contact app admin for assistance."
+                            android:textSize="17sp" />
+
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+
+                        <!-- DATA AND PRIVACY CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Data and Privacy"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. What data do you collect?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="We collect information like your name, date of birth, email, and payment details to provide and improve our services."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. How is my data used?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="We use your data to manage subscriptions, process payments, track shake requests, and send important updates or promotions (with your permission)."
+                            android:textSize="17sp" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+                        <!-- REFUNDS AND CANCELLATIONS CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Refunds and Cancellations"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. How do refunds work?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="We follow our refund policy. If eligible, contact support with your order details."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. What's the refund policy?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Full refunds within 24 hours of purchase if no services are used. After that, refunds are at management's discretion."
+                            android:textSize="17sp" />
+
+                        <!-- Question 3 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="3. How do I cancel my subscription?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Cancel within 24 hours of purchase for a full refund if no services are used. Contact support for assistance otherwise."
+                            android:textSize="17sp" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+                        <!-- SHIPPING CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Shipping"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. What's the shipping policy?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="The app offers digital services, so no physical products require shipping."
+                            android:textSize="17sp" />
+
+
+                        <!-- TROUBLESHOOTING CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Troubleshooting"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. No OTP received during signup?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Verify your mobile number is correct and has network coverage. Try resending the OTP or contact support if the issue persists."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. I forgot my password."
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Use on the login page to reset it via email or mobile number."
+                            android:textSize="17sp" />
+
+                        <!-- Question 3 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="3. Error while purchasing a package?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Check your internet connection and try again. Contact support if the issue persists."
+                            android:textSize="17sp" />
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_below="@id/productContents"
+                            android:layout_marginBottom="20sp" />
+
+                        <!-- STANDARD TERMS AND POLICIES CATEGORY -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:text="Standard Terms and Policies"
+                            android:textAllCaps="true"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Question 1 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="1. What are the terms of use?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="By using the app, you agree to our Terms of Service, outlining acceptable app usage, user responsibilities, and limitations of liability."
+                            android:textSize="17sp" />
+
+                        <!-- Question 2 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="2. How is my data protected?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="We take data privacy and security seriously. Your data is stored securely and used only for providing and improving our services. Please review our Privacy Policy for more information."
+                            android:textSize="17sp" />
+
+                        <!-- Question 3 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10sp"
+                            android:justificationMode="inter_word"
+                            android:text="3. How do I contact support?"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20sp"
+                            android:text="Contact support through the app's section or email us directly at support@akshayfitness.in."
+                            android:textSize="17sp" />
+
+
+                        <TextView
+                            android:id="@+id/faqOutro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="50sp"
+                            android:justificationMode="inter_word"
+                            android:text="@string/faqOutro"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

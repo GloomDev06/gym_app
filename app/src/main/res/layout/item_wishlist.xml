@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/middle"
+    android:padding="5sp"
+    android:layout_margin="5sp">
+
+    <TextView
+        android:id="@+id/counts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:padding="5sp"
+        android:text="1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/shakeReqNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/cancel"
+        android:layout_toEndOf="@id/counts"
+        android:gravity="start"
+        android:padding="5sp"
+        android:text="Package name"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="5sp"
+        android:src="@drawable/times"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/requestTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/counts"
+        android:layout_toEndOf="@id/counts"
+        android:padding="5sp"
+        android:text="Package Credits"
+        android:textSize="16sp" />
+
+</RelativeLayout>

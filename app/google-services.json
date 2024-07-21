@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347193989934",
+    "project_id": "myhealthfitness-f407b",
+    "storage_bucket": "myhealthfitness-f407b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347193989934:android:7d8472ab4f25b9604278bf",
+        "android_client_info": {
+          "package_name": "com.fitness.myhealthfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347193989934-dvfpnk8ctnglslj9aa7dfj49c9ij5j81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUnurOTo5ZwqXVOFkbOu0AHOxy5KAigQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347193989934-dvfpnk8ctnglslj9aa7dfj49c9ij5j81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

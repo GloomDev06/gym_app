@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_img"
+    tools:context=".Error">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40sp">
+
+
+        <ImageView
+            android:id="@+id/errorQRImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/progress_circular"
+            android:background="@drawable/login_bg"
+            android:src="@drawable/qr" />
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/errorQR"
+            android:indeterminate="true"
+            android:layout_margin="15sp"
+            android:indeterminateTint="@color/black"
+            android:indeterminateTintMode="src_atop"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/errorQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50sp"
+            android:text="The QR is invalid one. Try to scan valid QR Code"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".Packages">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/headerOfHome"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bottom_cover"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="10sp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/notification"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginEnd="20sp"-->
+<!--                android:src="@drawable/bell" />-->
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerOfHome"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="20sp"
+            android:text="Packages"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecycelrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleSettings"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp" />
+
+
+    </RelativeLayout>
+</ScrollView>

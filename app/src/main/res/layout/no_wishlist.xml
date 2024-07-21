@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/shakeRequestsNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/middle"
+        android:elevation="3sp"
+        android:orientation="vertical"
+        android:padding="15sp">
+
+        <TextView
+            android:id="@+id/saveCardHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wish list"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="There is no packages to be added in the wish list. Kindly add and view here."
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

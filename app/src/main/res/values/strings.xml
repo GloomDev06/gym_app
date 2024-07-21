@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weight Loss With - Akshay Fitness</string>
+    <string name="default_web_client_id">368420991469-mem7ni2l1on37dii2pp8cq4uroroia3r.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="faqIntroText">\t\tAbsolutely, here\'s a concise FAQ for the fitness center app that combines the best aspects of the previous responses and addresses identified areas for improvement</string>
+    <string name="faqOutro">\t\tThis FAQ provides a clear and concise overview of the app\'s core functionalities, addressing user concerns and referencing relevant policies for further details.</string>
+    <string name="textOne">Weightloss with Akshay Fitness (\"we,\" \"us,\" or \"our\") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our App.</string>
+    <string name="textTwo">\t\t\tPersonal Information: Identifies you as an individual and includes:</string>
+
+
+</resources>

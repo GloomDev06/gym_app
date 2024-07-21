@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Payment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="30sp">
+
+            <ImageView
+                android:id="@+id/introImg"
+                android:layout_width="wrap_content"
+                android:layout_height="400sp"
+                android:src="@drawable/qr_payment" />
+
+            <TextView
+                android:id="@+id/shakeHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/introImg"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30sp"
+                android:text="Your current Credits"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shakeCredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/introImg"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30sp"
+                android:text="Shake Credits Left"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/requiredHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shakeHeading"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20sp"
+                android:text="Required Credits"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/requiredCredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shakeHeading"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20sp"
+                android:text="Required credits"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/balanceHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requiredHeading"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20sp"
+                android:text="Balance Credits"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/balanceCredits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requiredHeading"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20sp"
+                android:text="Balance credits"
+                android:textSize="17sp" />
+
+
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/balanceHeading"
+                android:layout_marginTop="40sp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_btn"
+                    android:text="Cancel" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/proceedPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/register_btn"
+                    android:text="Proceed"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarHorizontal"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttons"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30sp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/black"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

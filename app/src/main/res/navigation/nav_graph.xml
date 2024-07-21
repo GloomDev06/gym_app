@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentQR">
+
+    <fragment
+        android:id="@+id/fragmentQR"
+        android:name="com.example.myhealthfitness.FragmentQR"
+        tools:layout="@layout/fragment_q_r">
+        <action
+            android:id="@+id/action_fragmentQR_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.myhealthfitness.FragmentPayment"
+        tools:layout="@layout/fragment_payment" />
+
+</navigation>
