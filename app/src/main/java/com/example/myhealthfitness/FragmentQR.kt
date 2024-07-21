@@ -127,7 +127,7 @@ class FragmentQR : Fragment() {
                             val user = snapshot.getValue(User::class.java)
                             val availableCredits =
                                 user?.available_credits?.takeIf { it.isNotEmpty() } ?: "0"
-                            if (availableCredits == "1") {
+                            if (availableCredits == "0") {
                                 Toast.makeText(
                                     requireContext(),
                                     "Invalid Credit Score",

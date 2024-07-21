@@ -83,7 +83,7 @@ class Payment : AppCompatActivity() {
                                     paymentBinding.cancelBtn.visibility = View.GONE
                                     paymentBinding.progressBarHorizontal.visibility = View.VISIBLE
 
-                                    if (remainingCredits == 0) {
+                                    if (remainingCredits < 1) {
                                         showToast("Your credit score is low. Please recharge credits to proceed.")
                                         paymentBinding.cancelBtn.visibility = View.VISIBLE
                                         paymentBinding.progressBarHorizontal.visibility = View.GONE
