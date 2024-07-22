@@ -1,9 +1,11 @@
 package com.fitness.myhealthfitness
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -92,6 +94,94 @@ class LoginPage : AppCompatActivity() {
             startActivity(Intent(this, Register::class.java))
             finish()
         }
+        // Add click listener to mobile ImageView for OTP login
+        loginPageBinding.mobile.setOnClickListener {
+            startOTPLogin()
+        }
+    }
+
+    private fun startOTPLogin() {
+        // Prompt user to enter their mobile number
+        val builder = AlertDialog.Builder(this)
+        val view = layoutInflater.inflate(R.layout.dialog_mobile_input, null)
+        val mobileEditText = view.findViewById<EditText>(R.id.mobileEditText)
+        builder.setView(view)
+        builder.setPositiveButton("Send OTP") { _, _ ->
+            val mobileNumber = mobileEditText.text.toString().trim()
+            if (mobileNumber.isNotEmpty()) {
+                sendOTPToMobileLogin(mobileNumber)
+            } else {
+                showToast("Please enter a mobile number")
+            }
+        }
+        builder.setNegativeButton("Cancel", null)
+        builder.show()
+    }
+
+    private fun sendOTPToMobileLogin(mobile: String) {
+        val options = PhoneAuthOptions.newBuilder(FirebaseAuth.getInstance())
+            .setPhoneNumber(mobile)
+            .setTimeout(60L, TimeUnit.SECONDS)
+            .setActivity(this)
+            .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                override fun onVerificationCompleted(credential: PhoneAuthCredential) {
+                    // Automatically verifies and signs in the user.
+                    showToast("Verification completed")
+                    signInWithPhoneAuthCredential(credential)
+                }
+
+                override fun onVerificationFailed(e: FirebaseException) {
+                    showToast("Verification failed: ${e.message}")
+                }
+
+                override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
+                    super.onCodeSent(verificationId, token)
+                    showToast("OTP sent to mobile number")
+                    // Store verificationId and token for use in verification step
+                    this@LoginPage.verificationId = verificationId
+                    this@LoginPage.resendToken = token
+                    // Prompt user to enter the OTP
+                    promptUserForOTP()
+                }
+            })
+            .build()
+        PhoneAuthProvider.verifyPhoneNumber(options)
+    }
+
+    private fun promptUserForOTP() {
+        // Prompt user to enter the OTP
+        val builder = AlertDialog.Builder(this)
+        val view = layoutInflater.inflate(R.layout.dialog_otp_input, null)
+        val otpEditText = view.findViewById<EditText>(R.id.otpEditText)
+        builder.setView(view)
+        builder.setPositiveButton("Verify") { _, _ ->
+            val otp = otpEditText.text.toString().trim()
+            if (otp.isNotEmpty()) {
+                verifyOTP(otp)
+            } else {
+                showToast("Please enter the OTP")
+            }
+        }
+        builder.setNegativeButton("Cancel", null)
+        builder.show()
+    }
+
+    private fun verifyOTP(otp: String) {
+        val credential = PhoneAuthProvider.getCredential(verificationId, otp)
+        signInWithPhoneAuthCredential(credential)
+    }
+
+    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    showToast("Signed in as ${user?.phoneNumber}")
+                    navigateToHomePage()
+                } else {
+                    showToast("Authentication failed")
+                }
+            }
     }
 
     private fun isUserLoggedIn(): Boolean {
@@ -275,4 +365,5 @@ class LoginPage : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
 }
