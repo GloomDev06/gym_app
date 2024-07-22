@@ -16,7 +16,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
@@ -56,9 +55,21 @@ class LoginPage : AppCompatActivity() {
 
         val currentUser = auth.currentUser
 
-        if (currentUser != null && sharedPreferences.getBoolean("rememberMe", true)) {
+        if (currentUser != null && sharedPreferences.getBoolean("rememberMe", false)) {
             startActivity(Intent(this, Homepage::class.java))
             finish()
+        }
+
+        loginPageBinding.switchRememberMe.isChecked = sharedPreferences.getBoolean("rememberMe", false)
+
+        loginPageBinding.switchRememberMe.setOnCheckedChangeListener { _, isChecked ->
+            val editor = sharedPreferences.edit()
+            editor.putBoolean("rememberMe", isChecked)
+            if (!isChecked) {
+                editor.remove("email")
+                editor.remove("password")
+            }
+            editor.apply()
         }
 
         loginPageBinding.google.setOnClickListener {
@@ -81,15 +92,6 @@ class LoginPage : AppCompatActivity() {
             startActivity(Intent(this, Register::class.java))
             finish()
         }
-
-//        loginPageBinding.forgotPassword.setOnClickListener {
-//            val email = loginPageBinding.emailEditText.text.toString().trim()
-//            if (email.isNotEmpty()) {
-//                sendForgotPasswordOTP(email)
-//            } else {
-//                showToast("Please enter your email to reset password")
-//            }
-//        }
     }
 
     private fun isUserLoggedIn(): Boolean {
@@ -99,10 +101,12 @@ class LoginPage : AppCompatActivity() {
     }
 
     private fun saveUserCredentials(email: String, password: String) {
-        val editor = sharedPreferences.edit()
-        editor.putString("email", email)
-        editor.putString("password", password)
-        editor.apply()
+        if (loginPageBinding.switchRememberMe.isChecked) {
+            val editor = sharedPreferences.edit()
+            editor.putString("email", email)
+            editor.putString("password", password)
+            editor.apply()
+        }
     }
 
     private fun hashPassword(password: String): String {
@@ -252,10 +256,7 @@ class LoginPage : AppCompatActivity() {
                     showToast("Verification failed: ${e.message}")
                 }
 
-                override fun onCodeSent(
-                    verificationId: String,
-                    token: PhoneAuthProvider.ForceResendingToken
-                ) {
+                override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
                     super.onCodeSent(verificationId, token)
                     showToast("OTP sent to mobile number")
                     // Store verificationId and token for use in verification step
@@ -267,21 +268,11 @@ class LoginPage : AppCompatActivity() {
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
 
-
-    private fun Context.showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
-
     companion object {
         private const val RC_SIGN_IN = 9001
     }
 
-    override fun onResume() {
-        super.onResume()
-        if (intent.hasExtra("logout")) {
-            val editor = sharedPreferences.edit()
-            editor.clear()
-            editor.apply()
-        }
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

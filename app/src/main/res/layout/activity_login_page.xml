@@ -95,35 +95,35 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-<!--            <androidx.appcompat.widget.SwitchCompat-->
-<!--                android:id="@+id/switchRememberMe"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="45dp"-->
-<!--                android:layout_below="@id/password"-->
-<!--                android:checked="true"-->
-<!--                app:thumbTint="@color/grey"-->
-<!--                app:trackTint="@color/grey2" />-->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchRememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/password"
+                android:checked="true"
+                app:thumbTint="@color/grey"
+                app:trackTint="@color/grey2" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/rememberMeText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="45dp"-->
-<!--                android:layout_below="@id/password"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_toEndOf="@id/switchRememberMe"-->
-<!--                android:gravity="center_vertical"-->
-<!--                android:text="Remember Me"-->
-<!--                android:textSize="16sp" />-->
+            <TextView
+                android:id="@+id/rememberMeText"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/password"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@id/switchRememberMe"
+                android:gravity="center_vertical"
+                android:text="Remember Me"
+                android:textSize="16sp" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/forgotPassword"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="45dp"-->
-<!--                android:layout_below="@id/password"-->
-<!--                android:layout_alignParentEnd="true"-->
-<!--                android:gravity="center_vertical"-->
-<!--                android:text="Forgot Password?"-->
-<!--                android:textSize="16sp" />-->
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_below="@id/password"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:text="Forgot Password?"
+                android:textSize="16sp" />
 
 
             <androidx.appcompat.widget.AppCompatButton
@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/password"
-                android:layout_marginTop="30sp"
+                android:layout_marginTop="35sp"
                 android:background="@drawable/button_bg"
                 android:text="Login"
                 android:textColor="@color/white"

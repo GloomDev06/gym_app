@@ -18,8 +18,9 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.*
-
 import java.security.MessageDigest
+import android.util.Patterns
+
 
 class Register : AppCompatActivity() {
 
@@ -68,19 +69,47 @@ class Register : AppCompatActivity() {
         }
 
         registerBinding.loginButton.setOnClickListener {
+            Log.d("RegisterActivity", "Login button clicked")
             val username = registerBinding.userNameEditText.text.toString().trim()
             val email = registerBinding.emailEditText.text.toString().trim()
             val mobile = registerBinding.mobileEditText.text.toString().trim()
             val password = registerBinding.passwordEditText.text.toString().trim()
             val confirmPassword = registerBinding.conformPaswordEditText.text.toString().trim()
-
-            if (password == confirmPassword) {
+            if (validateInputs(username, email, mobile, password, confirmPassword)) {
                 val hashedPassword = hashPassword(password)
                 checkIfUserExists(username, email, mobile, hashedPassword)
-            } else {
-                showToast("Passwords do not match")
             }
         }
+    }
+
+    private fun validateInputs(
+        username: String,
+        email: String,
+        mobile: String,
+        password: String,
+        confirmPassword: String
+    ): Boolean {
+        if (username.isEmpty()) {
+            showToast("Please enter a username")
+            return false
+        }
+        if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            showToast("Please enter a valid email address")
+            return false
+        }
+        if (mobile.isEmpty() || !Patterns.PHONE.matcher(mobile).matches()) {
+            showToast("Please enter a valid mobile number")
+            return false
+        }
+        if (password.isEmpty()) {
+            showToast("Please enter a password")
+            return false
+        }
+        if (password != confirmPassword) {
+            showToast("Passwords do not match")
+            return false
+        }
+        return true
     }
 
     private fun isUserLoggedIn(): Boolean {
