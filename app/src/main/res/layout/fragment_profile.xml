@@ -56,16 +56,14 @@
             </RelativeLayout>
 
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/logo"
                 android:layout_width="200sp"
                 android:layout_height="200sp"
                 android:layout_below="@id/headerOfHome"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40sp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/user_profile"
-                app:shapeAppearanceOverlay="@style/roundedImageView" />
+                android:src="@drawable/user_profile" />
 
             <TextView
                 android:id="@+id/goldMember"
