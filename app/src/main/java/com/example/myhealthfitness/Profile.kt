@@ -36,6 +36,10 @@ class Profile : Fragment() {
 
         fetchUserData(root)
 
+        root.findViewById<ImageView>(R.id.editUserName).setOnClickListener {
+            showEditDialog("username")
+        }
+
         root.findViewById<ImageView>(R.id.editPhone).setOnClickListener {
             showEditDialog("phone")
         }
@@ -132,6 +136,9 @@ class Profile : Fragment() {
 
     private fun updateField(field: String, newText: String) {
         when (field) {
+            "username" -> {
+                updateFirebaseField("username", newText)
+            }
             "phone" -> {
                 val phoneTextView: TextView? = view?.findViewById(R.id.phoneNumber)
                 // Check if the new phone number is already registered with another email
@@ -204,6 +211,7 @@ class Profile : Fragment() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         when (field) {
+                            "username" -> view?.findViewById<TextView>(R.id.username)?.text = newText
                             "phone" -> view?.findViewById<TextView>(R.id.phoneNumber)?.text =
                                 newText
 
@@ -216,6 +224,7 @@ class Profile : Fragment() {
 
                         sharedPreferences.edit().apply {
                             when (field) {
+                                "username" -> putString("username", newText)
                                 "phone" -> putString("mobile", newText)
                                 "email" -> putString("email", newText)
                                 "dob" -> putString("dob", newText)

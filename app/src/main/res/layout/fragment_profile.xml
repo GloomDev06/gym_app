@@ -95,6 +95,18 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/editUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="28sp"
+                android:layout_below="@id/goldMember"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="30sp"
+                android:labelFor="@id/editPhone"
+                android:onClick="showEditDialog"
+                android:src="@drawable/pencil" />
+
             <TextView
                 android:id="@+id/userId"
                 android:layout_width="match_parent"
