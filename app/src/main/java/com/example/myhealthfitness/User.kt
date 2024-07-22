@@ -9,5 +9,6 @@ data class User(
     var total_purchase: String? = "",
     var available_credits: String? = "",
     var credits_spend: String? = "",
-    var date_of_birth: String? = ""
+    var date_of_birth: String? = "",
+    var image:String?=null
 )

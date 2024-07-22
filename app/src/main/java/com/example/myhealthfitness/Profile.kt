@@ -3,6 +3,7 @@ package com.fitness.myhealthfitness
 import android.app.DatePickerDialog
 import android.content.Context
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,9 +13,12 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.google.firebase.database.*
+import com.google.firebase.storage.FirebaseStorage
+import com.squareup.picasso.Picasso
 import java.util.Calendar
 
 class Profile : Fragment() {
@@ -22,6 +26,54 @@ class Profile : Fragment() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var database: DatabaseReference
     private var userId: String? = null
+
+    private val launcher = registerForActivityResult(ActivityResultContracts.GetContent()) {
+            uri->
+        uri?.let {
+            uploadImage(uri) { downloadUrl->
+                val user = User()
+                user.image=downloadUrl
+                val logo = view?.findViewById<ImageView>(R.id.logo)
+                logo?.setImageURI(uri)
+            }
+        }
+    }
+
+    private fun uploadImage(uri: Uri, callback: (String) -> Unit) {
+        userId?.let { id ->
+            // Reference to Firebase Storage
+            val storageReference = FirebaseStorage.getInstance().reference.child("images/${id}/${uri.lastPathSegment}")
+
+            // Firebase Storage
+            val uploadTask = storageReference.putFile(uri)
+            uploadTask.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    storageReference.downloadUrl.addOnSuccessListener { downloadUrl ->
+                        val databaseReference = FirebaseDatabase.getInstance().getReference("MyFitness/userDetails/$id/image")
+                        databaseReference.setValue(downloadUrl.toString())
+                            .addOnCompleteListener { dbTask ->
+                                if (dbTask.isSuccessful) {
+                                    val logo = view?.findViewById<ImageView>(R.id.logo)
+                                    logo?.setImageURI(downloadUrl)
+                                    fetchUserData(requireView())
+
+                                    sharedPreferences.edit().apply {
+                                        putString("image", downloadUrl.toString())
+                                        apply()
+                                    }
+                                    showToast("New image uploaded successfully!")
+                                    callback(downloadUrl.toString())
+                                } else {
+                                    showToast("Failed to update image")
+                                }
+                            }
+                    }
+                } else {
+                    showToast("Failed to upload image")
+                }
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +87,22 @@ class Profile : Fragment() {
         database = FirebaseDatabase.getInstance().reference
 
         fetchUserData(root)
+
+        userId?.let { id ->
+            val databaseReference = FirebaseDatabase.getInstance().getReference("MyFitness/userDetails/$id/image")
+            databaseReference.get().addOnSuccessListener { snapshot ->
+                val imageUrl = snapshot.getValue(String::class.java)
+                if (imageUrl != null) {
+                    // Load the image with Picasso
+                    val logo = view?.findViewById<ImageView>(R.id.logo)
+                    Picasso.get().load(imageUrl).into(logo)
+                }
+            }
+        }
+
+        root.findViewById<ImageView>(R.id.logo).setOnClickListener {
+            launcher.launch("image/*")
+        }
 
         root.findViewById<ImageView>(R.id.editUserName).setOnClickListener {
             showEditDialog("username")
