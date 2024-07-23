@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_img"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MobileNumberActivity">
+
+    <EditText
+        android:id="@+id/mobileEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Mobile Number"
+        android:inputType="phone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendOtpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_bg"
+        android:text="Send OTP"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

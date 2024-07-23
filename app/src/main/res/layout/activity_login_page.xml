@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/password"
-                android:layout_marginTop="35sp"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/button_bg"
                 android:text="Login"
                 android:textColor="@color/white"
@@ -185,8 +185,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/button_bg"
                     android:padding="10sp"
-                    android:src="@drawable/mobile"
-                    android:onClick="startOTPLogin"/>
+                    android:src="@drawable/mobile" />
 
                 <ImageView
                     android:id="@+id/google"

@@ -19,6 +19,12 @@
         android:theme="@style/Theme.MyHealthFitness"
         tools:targetApi="31">
         <activity
+            android:name=".MobileNumberActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.myhealthfitness.OTPActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProductPackages"
             android:exported="false" />
         <activity
