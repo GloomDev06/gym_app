@@ -1,29 +1,45 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="true"
     android:background="@drawable/bg_img"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
     tools:context=".MobileNumberActivity">
 
-    <EditText
-        android:id="@+id/mobileEditText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Mobile Number"
-        android:inputType="phone" />
+        android:layout_gravity="center_vertical"
+        android:layout_margin="20sp"
+        android:background="@drawable/login_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="30sp">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/sendOtpButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button_bg"
-        android:text="Send OTP"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <EditText
+            android:id="@+id/mobileEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Mobile Number"
+            android:inputType="phone"
+            android:textColorHint="@color/grey2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sendOtpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_bg"
+            android:text="Send OTP"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
